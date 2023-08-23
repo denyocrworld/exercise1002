@@ -1,3 +1,3 @@
-String fullName = "Deny";
-String email = "denyocr.world@gmail.com";
-String whatsapp = "6282146727409";
+String fullName = "deny";
+String email = "test@gmail.com";
+String whatsapp = "71212542";

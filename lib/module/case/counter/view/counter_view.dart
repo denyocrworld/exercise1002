@@ -19,9 +19,9 @@ class CounterView extends StatefulWidget {
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
-              Text(
-                "Counter: ${controller.counter}",
-                style: const TextStyle(
+              const Text(
+                "Counter: n",
+                style: TextStyle(
                   fontSize: 30.0,
                   fontWeight: FontWeight.bold,
                 ),
@@ -33,14 +33,14 @@ class CounterView extends StatefulWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ElevatedButton(
-                    onPressed: () => controller.increment(),
+                    onPressed: () {},
                     child: const Text("Increment"),
                   ),
                   const SizedBox(
                     width: 12.0,
                   ),
                   ElevatedButton(
-                    onPressed: () => controller.decrement(),
+                    onPressed: () {},
                     child: const Text("Decrement"),
                   ),
                 ],
