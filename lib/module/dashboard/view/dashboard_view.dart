@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:state_management_exercises/core.dart';
+import 'package:state_management_exercises/user.dart';
 
 class DashboardView extends StatefulWidget {
   const DashboardView({Key? key}) : super(key: key);
@@ -8,6 +9,41 @@ class DashboardView extends StatefulWidget {
     controller.view = this;
     DashboardService dashboardService = DashboardService();
 
+    if (fullName.isEmpty || whatsapp.isEmpty || email.isEmpty) {
+      return Scaffold(
+        body: Container(
+          width: MediaQuery.of(context).size.width,
+          padding: const EdgeInsets.all(8.0),
+          child: const Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Wajib di isi",
+                style: TextStyle(
+                  fontSize: 30.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                "Isi data di lib/user.dart dulu yaa!",
+                style: TextStyle(
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                "* Hot restart setelah mengisi Form yaa",
+                style: TextStyle(
+                  fontSize: 16.0,
+                  color: Colors.red,
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
     return Scaffold(
       backgroundColor: Colors.grey[300],
       appBar: AppBar(
