@@ -18,9 +18,10 @@ void main() async {
     {
       "module": "counter",
       "requirements": [
-        ": \${controller.counter}",
-        "() => increment()",
-        "() => decrement()",
+        "int counter",
+        "increment()",
+        "decrement()",
+        "setState",
       ],
     },
     {

@@ -17,4 +17,16 @@ class CounterController extends State<CounterView> {
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  int counter = 0;
+
+  increment() {
+    counter++;
+    setState(() {});
+  }
+
+  decrement() {
+    counter--;
+    setState(() {});
+  }
 }
