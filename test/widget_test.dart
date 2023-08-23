@@ -132,7 +132,6 @@ void main() async {
     List requirements = task["requirements"] as List;
 
     for (var req in requirements) {
-      print(req);
       if (content.contains(req)) {
         point++;
       }
@@ -156,6 +155,8 @@ void main() async {
       "chapter": "Chapter 1002",
     },
   );
+
+  print("Your point is submitted! Thanks");
 }
 
 extension StringExtension on String {
